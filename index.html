@@ -48,8 +48,8 @@
     <div class="flex flex-col items-center p-4">
 
       <img id="imageDisplay" src="./images/image1.gif"
+        class="rounded-md h-[300px] hidden"
         alt="Cute kitten"
-        class="rounded-md h-[300px]"
         style="object-fit: cover;" />
 
       <h2 id="valentineQuestion"
@@ -131,6 +131,7 @@
   yesButton.addEventListener("click", () => {
     if (stage === 0) {
       stage = 1;
+      imageDisplay.classList.remove("hidden"); // show image now
       typeText(valentineQuestion, "Will you be my Valentine? 💌");
       noButton.textContent = "No";
       return;
@@ -168,3 +169,4 @@
 
 </body>
 </html>
+
